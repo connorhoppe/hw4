@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', async function() {
   function getRideHTML(serviceLevel, ride) {
     //Determine service level
     if (serviceLevel == 'Noober X'){
-      //Insert into HTML
+      //Insert into and return HTML for Noober X
       return `<h1 class="inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
       <i class="fas fa-car-side"></i>
       <span>Noober X</span>
@@ -44,8 +44,8 @@ window.addEventListener('DOMContentLoaded', async function() {
         </div>
       </div>`
     } else if (serviceLevel == 'Noober XL'){
-      //Insert into HTML
-      return `<h1 class="inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+      //Insert into and return HTML for Noober XL
+      return `<h1 class="inline-block mt-8 px-4 py-2 rounded-xl text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
       <i class="fas fa-car-side"></i>
       <span>Noober XL</span>
       </h1>
@@ -76,8 +76,8 @@ window.addEventListener('DOMContentLoaded', async function() {
         </div>
       </div>`
     } else if (serviceLevel == 'Noober Purple'){
-      //Insert into HTML
-      return `<h1 class="inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+      //Insert into and return HTML for Noober Purple
+      return `<h1 class="inline-block mt-8 px-4 py-2 rounded-xl text-2xl font-bold underline bg-clip-text text-purple-500">
       <i class="fas fa-car-side"></i>
       <span>Noober Purple</span>
       </h1>
@@ -124,7 +124,7 @@ window.addEventListener('DOMContentLoaded', async function() {
 
     // Create HTML element variable to add rides
     let ridesElement = document.querySelector(`.rides`)
-      // Question for office hours: Does it matter whether this is inside or outside the for loop?
+      // Question for office hours: Does it matter whether this is inside or outside the for loop? Appears not to, but wondering why we did it inside in the week 4 example.
 
     //Take data from rides data variable and insert HTML into rides element using getRideHTML function
     ridesElement.insertAdjacentHTML(`beforeend`,getRideHTML(serviceLevel,json[i]))
